@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: hsl(219, 88%, 38%);
+}
+
+header{
+    box-shadow: 0px 3px 10 rgb(90, 132, 216);
+    align-items: center;    
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(3, 20, 58);
+    padding: 1.5rem 6rem; 
+    position: relative;
+    align-items: center; 
+    max-width: 500%
+}
+.menu-toggle{
+    display: none;
+    background-color: none;
+    border: none;
+    color: blue;
+    font-size: 30px;
+    cursor: pointer;
+}
+.navegation {
+    display: flex;
+    align-items: center;
+    width: 55%;
+}
+.navegation ul {
+    display: flex;
+    list-style: none;
+    margin: 0 15px; 
+}
+.navegation ul li{
+    margin: 0 15px;
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; 
+        color: blue;
+        background-color: black;
+    }
+
+    .navegation {
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 100%; 
+        right: 0;
+        background-color: rgb(10, 21, 44);
+        z-index: 10; 
+    }
+
+    .navegation.active {
+        display: flex; 
+    }
+
+    .navegation ul {
+        flex-direction: column; 
+        padding: 10px 0; 
+    }
+
+    .navegation ul li {
+        margin: 10px 0;
+    }
+    }
+
+
+.imagem {
+    width: 100%; 
+    max-width: 60%;
+    height: auto; 
+    margin: 0 auto; 
+}
+
+.icon {
+    margin: 0 15px;
+    font-size: 2rem;
+}
+
+ul {
+    height: 100%;    
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.15rem; 
+    padding: 13px 4%;
+    display: flex;
+    margin-bottom: 30px;
+    line-height: 30px;
+    margin-left: 15px;
+    font-weight: 400; 
+    transition: 2s
+}
+
+ul li a:hover {
+    background-color: rgb(60, 109, 206); 
+    width: 115%;
+
+}
+.title {
+    margin-left: 25px;
+    font-size: 1.65em;
+}
+
+/* Estilo da Tabela */
+h1{
+    text-align: center;
+    color: #ffff;
+}
+table {
+    margin: 0 auto; 
+    border: #030303;
+    margin-left: 25%;
+    width: 50%; 
+    padding-top: 2rem;
+    color: #ffff;
+}
+
+th, td {
+    border: 3px solid hsl(219, 87%, 15%);
+    background-color: hsl(219, 83%, 26%);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+h2{
+    text-align: center;
+    color: #ffff;
+}
+p{
+    text-align: center;
+    color: #ffff;
+}
+img{
+    display: block; 
+    margin: 0 auto; 
+    max-width: 100%;
+}
+ 
