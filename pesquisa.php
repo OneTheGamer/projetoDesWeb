@@ -61,41 +61,50 @@
         </form>
     </nav><br>
     <table class="tabela-pesquisa-hover">
-        <thead>
-            <tr>
+    <thead>
+        <tr>
             <th>Modelo do veículo</th>
             <th>Placa do veículo</th>
             <th>Hora de entrada</th>
             <th>Permanência</th>
             <th>Funções</th>
-            </tr>
-        </thead>
-        <tbody>
+        </tr>
+    </thead>
+    <tbody>
+    <?php
+    while ($linha = mysqli_fetch_assoc($dados)) {
+        $modelo = $linha['Modelo'];
+        $placa = $linha['Placa'];
+        $horaEntrada = $linha['Horário'];
 
-        <?php
-        while ( $linha = mysqli_fetch_assoc($dados) ) {
-            $modelo = $linha['Modelo'];
-            $placa = $linha['Placa'];
-            $horaEntrada = $linha['Horário'];
-        //    $permanencia = $horaEntrada;
+        // Cria um objeto DateTime apenas com a hora de entrada (sem data)
+        $dataEntrada = new DateTime($horaEntrada);  // a hora de entrada é no formato 00:00:00
 
-            echo "<tr>
-            <th>$modelo</th>
-            <th>$placa</th>
-            <th>$horaEntrada</th>
-            <th>00:01:34</th>
-            <th>
-            
-            
-            </th>
-                </tr>";
-        } 
+        // Pega a hora atual
+        $dataAtual = new DateTime();
 
-        //$dataEntrada = new DateTime(date("Y-m-d") ."".$horaEntrada);
-        //echo $dataEntrada->format('H:i:s');
+        // calcula a diferença entre a hora de entrada e a hora atual
+        $intervalo = $dataEntrada->diff($dataAtual);
+
+        // se a diferença for maior que 24 horas (por exemplo, o veículo ficou mais de um dia), vamos apenas exibir o tempo de horas e minutos
+        $horasTotais = ($intervalo->d * 24 * 60) + ($intervalo->h * 60) + $intervalo->i; // total de minutos de diferença
+        $horas = floor($horasTotais / 60); // converte de minutos para horas
+        $minutos = $horasTotais % 60; // Pega o restante dos minutos
+
+        // mostra o tempo de permanência no formato hora:minuto
+        $tempoPermanencia = sprintf('%02d:%02d', $horas, $minutos);
+
+        echo "<tr>
+            <td>$modelo</td>
+            <td>$placa</td>
+            <td>$horaEntrada</td>
+            <td>$tempoPermanencia</td>
+            <td>Função</td>
+        </tr>";
+    } 
     ?>
-        </tbody>
-    </table><br>
+    </tbody>
+</table><br>
     <div class="painel-coluna" style="text-align:center;"> 
         <a href="index.php" class="button">Voltar ao início</a>          
         </div>

@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('America/Sao_paulo');
 $server = "localhost";
 $user = "root";
 $password = ""; // senha q n existe
