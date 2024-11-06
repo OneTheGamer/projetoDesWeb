@@ -14,7 +14,7 @@
 <header>     
   <nav class="menu">
     <div class="logo">
-        <a href="cadastro.php"><img class="imagem" src="imagens/logo.png.png" alt="LOGO1"></a>
+        <img class="imagem" src="imagens/logo.png.png" alt="LOGO1">
     </div>   
     <button class="menu-toggle" aria-label="Toggle menu">
     &#9776;
@@ -39,48 +39,31 @@
   </nav>
 </header><br><br><br><br><br>
 
-<div>
-    <form method="POST" action="cadastro_script.php">
-        <legend class="borda"><h2>Registro de entrada</h2></legend><br>
-        <br>
-
-        <label class="borda">Modelo:</label>
-        <input type="text" id="name" name="name" placeholder="Digite o modelo do veiculo:" autocomplete="off"> <br> <br>
-
-        <label class="borda" for="">Placa do veiculo:</label>
-        <input type="text" id="licence" name="licence" placeholder="Digite a placa do veiculo:" autocomplete="off"> <br>
-        <br><br>
-
-        <div class="botao"> 
-        <button id="send" type="submit">Registrar</button>          
-        </div>    
-    </form>
-<!--
-</div><br>
-    </div>
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>VEICULO</th>
-                        <th>PLACA</th>
-                        <th>HORARIO</th>
-                        <th id="ações">AÇÕES</th>
-                    </tr>
-                </thead>
-                <tbody id="garage"></tbody>
-            </table>
-        </div>
--->
-<div style="text-align: center;font-weight:bolder;font-size:30px">
+<div class="msg_sucesso_cadastro">
     <?php
-    include 'php/conect.php';
+        include "php/conect.php";
 
+        $nome = $_POST['name'];
+        $placa = $_POST['licence'];
 
+        $sql = "INSERT INTO `estacionamento`(`Modelo`, `Placa`, `Horário`) VALUES ('$nome','$placa',CURRENT_TIME() )";
+
+        if (mysqli_query($conn, $sql)) {
+            echo "$nome cadastrado com sucesso!";
+        } else {
+            echo "ERRO! $nome não foi cadastrado.";
+        }
 
     ?>
-</div>
+    <br><br><br>
 
-<script src="js/script.js"></script>
+    <div class="botao" style="text-align:center;"> 
+        <a href="index.php" class="button" style="background-color:blue">Voltar</a>          
+        </div>
+
+</div><br>
+
+
+
 </body>
 </html>

@@ -9,8 +9,12 @@ $conn = mysqli_connect($server, $user, $password, $bd);
 
 // Verificar conexão
 if ($conn) {
-    echo "Conectado ao banco de dados!";
+    //echo "Conectado ao banco de dados!";
 } else {
-    die("Erro ao conectar ao banco de dados: " . mysqli_connect_error());
+   echo "Erro ao conectar no banco de dados.";
+}
+
+function mensagem($texto, $tipo) {
+    echo "Deu tudo certo";
 }
 ?>

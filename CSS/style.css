@@ -208,3 +208,55 @@ th, td {
     font-weight: bold;
 
 }
+
+/* Aqui voc6e pode dar um estilo a mensagem de cadastro com sucesso*/
+.msg_sucesso_cadastro {
+    text-align: center;
+    font-weight:bolder; 
+    font-size:x-large; 
+    color:lightgreen
+}
+/*Aqui é oq eu fiz para o botão do cadastro, ele só faz voltar a pagina inicial*/
+a.button {
+    display: inline-block;
+    padding: 10px 20px;            
+    font-size: 16px;               
+    color: #ffffff;                
+    background-color: #007bff;     
+    text-align: center;            
+    text-decoration: none;         
+    border-radius: 5px;            
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animação suave */
+}
+
+a.button:hover {
+    background-color: #0057b379;     
+    transform: scale(1.15);        /* Leve aumento ao passar o mouse */
+}
+
+a.button:active {
+    background-color: #004080;     /* Cor ao clicar no botão */
+    transform: scale(0.95);        /* Leve redução ao clicar */
+}
+
+/*Coloquei a cor verde no fundo só para ter a noção do tamanho do container*/
+.painel-container{
+    text-align: center;
+    height: 30%;
+    margin-inline: 20%;
+    background-color: hsl(219, 87%, 15%);
+}
+.painel-coluna{
+    display: block;
+    line-height: 2;
+    padding: 0;
+    color: #f3f3f3;
+
+}
+.linha{
+    padding: 0;
+    margin-inline: 20%;
+    border: none;
+    border-top: 1px solid #f3f3f3;
+    transform: scaleY(0.5);
+}

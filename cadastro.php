@@ -39,48 +39,18 @@
   </nav>
 </header><br><br><br><br><br>
 
-<div>
-    <form method="POST" action="cadastro_script.php">
-        <legend class="borda"><h2>Registro de entrada</h2></legend><br>
-        <br>
-
-        <label class="borda">Modelo:</label>
-        <input type="text" id="name" name="name" placeholder="Digite o modelo do veiculo:" autocomplete="off"> <br> <br>
-
-        <label class="borda" for="">Placa do veiculo:</label>
-        <input type="text" id="licence" name="licence" placeholder="Digite a placa do veiculo:" autocomplete="off"> <br>
-        <br><br>
-
-        <div class="botao"> 
-        <button id="send" type="submit">Registrar</button>          
-        </div>    
-    </form>
-<!--
-</div><br>
+<div class="painel-container">
+    <div class="painel-coluna">
+        <h1>Sistema para controle de estacionamentos Bitstop</h1>
+        <p>A conexão perfeita entre você e seu Veiculo</p>
+        <hr class="linha">
+        <p>Acesse nosso painel de gerenciamento.</p>
+        <a href="index.php" class="button">Entrada de veículos</a>
+        <a href="pesquisa.php" class="button">Pesquisa de vagas</a>
     </div>
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>VEICULO</th>
-                        <th>PLACA</th>
-                        <th>HORARIO</th>
-                        <th id="ações">AÇÕES</th>
-                    </tr>
-                </thead>
-                <tbody id="garage"></tbody>
-            </table>
-        </div>
--->
-<div style="text-align: center;font-weight:bolder;font-size:30px">
-    <?php
-    include 'php/conect.php';
-
-
-
-    ?>
 </div>
 
-<script src="js/script.js"></script>
+
+
 </body>
 </html>
