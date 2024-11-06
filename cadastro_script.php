@@ -58,7 +58,7 @@
     <br><br><br>
 
     <div class="botao" style="text-align:center;"> 
-        <a href="index.php" class="button" style="background-color:blue">Voltar</a>          
+        <a href="index.php" class="button" style="background-color:blue">Voltar ao início</a>          
         </div>
 
 </div><br>

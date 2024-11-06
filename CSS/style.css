@@ -260,3 +260,30 @@ a.button:active {
     border-top: 1px solid #f3f3f3;
     transform: scaleY(0.5);
 }
+
+/*Pode alterar tudo aqui, botei as cores e tamanhos só pra fazer funcionar*/
+.pesquisa1-BD{
+    display: block;
+    justify-content: left;
+    line-height: 2;
+}
+.titulo-pesquisaBD{
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
+    align-items: center;
+}
+.input-pesquisa{
+    width: 50%;
+    padding: 10px 20px;            
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-pesquisa{
+    width: 15%;
+    color: green;
+    border: 1px solid green;
+    background-color: transparent;
+    cursor: pointer;
+}

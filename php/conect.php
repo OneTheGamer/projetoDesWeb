@@ -17,4 +17,9 @@ if ($conn) {
 function mensagem($texto, $tipo) {
     echo "Deu tudo certo";
 }
+
+//function 
+
+
+//function permanencia(string $);
 ?>
