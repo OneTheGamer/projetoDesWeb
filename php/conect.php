@@ -15,9 +15,6 @@ if ($conn) {
    echo "Erro ao conectar no banco de dados.";
 }
 
-function mensagem($texto, $tipo) {
-    echo "Deu tudo certo";
-}
 
 //function 
 

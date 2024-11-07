@@ -9,8 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            height: 100dvh;
+            background-color: hsl(219, 88%, 38%) !important;
+        }
+    </style>
 </head>
-<body>  
+<body>
+  
 <header>     
   <nav class="menu">
     <div class="logo">
@@ -73,6 +80,7 @@
     <tbody>
     <?php
     while ($linha = mysqli_fetch_assoc($dados)) {
+        $codIndividual = $linha['ID'];
         $modelo = $linha['Modelo'];
         $placa = $linha['Placa'];
         $horaEntrada = $linha['Horário'];
@@ -99,7 +107,10 @@
             <td>$placa</td>
             <td>$horaEntrada</td>
             <td>$tempoPermanencia</td>
-            <td>Função</td>
+            <td>
+            <a href='cadastro_edit.php?id=$codIndividual' class='button-ADD'>Editar</a>
+            <a href='#' class='button-ESC' data-toggle='modal' data-target='#confirmModal' data-id='$codIndividual' onclick=" .'"' ."pegar_dados($codIndividual, '$placa')" .'"' .">Excluir</a>
+            </td>
         </tr>";
     } 
     ?>
@@ -107,6 +118,49 @@
 </table><br>
     <div class="painel-coluna" style="text-align:center;"> 
         <a href="index.php" class="button">Voltar ao início</a>          
+    </div>
+
+
+    <div class="modal fade" id="confirmModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirmação de Exclusão</h4>
+            </div>
+            <div class="modal-body">
+                <form action="exc_script.php" method="post">
+                <p>Certeza que deseja excluir? <b id="placa">Placa</b></p>
+                
+            </div>
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                    <input type="hidden" name="id" id="codIndi" value="">
+                    <input type="hidden" name="placa" id="placa1" value="">
+                    <input type="submit" id='confirmarExcluir' class='btn btn-primary' value="Sim">
+                </form>
+            </div>
         </div>
+    </div>
+    </div>
+
+        
+<!-- Inclua o CSS do Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Inclua o jQuery (necessário para o Bootstrap) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Inclua o JS do Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+    function pegar_dados(id, placas) {
+        document.getElementById('placa').innerHTML = placas;
+        document.getElementById('placa1').innerHTML = placas;
+        document.getElementById('codIndi').value = id;
+    }
+
+</script>
 </body>
 </html>

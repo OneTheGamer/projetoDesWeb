@@ -287,3 +287,90 @@ a.button:active {
     background-color: transparent;
     cursor: pointer;
 }
+
+
+a.button-ADD {
+    display: inline-block;
+    padding: 10px 20px;            
+    font-size: 16px;               
+    color: #ffffff;                
+    background-color: #188f00;     
+    text-align: center;            
+    text-decoration: none;         
+    border-radius: 5px;            
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animação suave */
+}
+
+a.button-ADD:hover {
+    background-color: #105f00;     
+    transform: scale(1.15);        /* Leve aumento ao passar o mouse */
+}
+
+a.button-ADD:active {
+    background-color: #093800;     /* Cor ao clicar no botão */
+    transform: scale(0.95);        /* Leve redução ao clicar */
+}
+
+a.button-ESC {
+    display: inline-block;
+    padding: 10px 20px;            
+    font-size: 16px;               
+    color: #ffffff;                
+    background-color: #e40000;     
+    text-align: center;            
+    text-decoration: none;         
+    border-radius: 5px;            
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animação suave */
+}
+
+a.button-ESC:hover {
+    background-color: #aa0000;     
+    transform: scale(1.15);        /* Leve aumento ao passar o mouse */
+}
+
+a.button-ESC:active {
+    background-color: #740000;     /* Cor ao clicar no botão */
+    transform: scale(0.95);        /* Leve redução ao clicar */
+}
+
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; /* Fica na tela toda */
+    z-index: 1; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Permite rolagem se necessário */
+    background-color: rgb(0,0,0); /* Cor de fundo */
+    background-color: rgba(0,0,0,0.4); /* Fundo com transparência */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centraliza o modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.msg_sucesso_exc {
+    text-align: center;
+    font-weight:bolder; 
+    font-size:x-large; 
+    color:lightgreen
+}

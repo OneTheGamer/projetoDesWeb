@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Estacionamento</title>
+    <title>Alterar Entrada de veículo</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,22 +43,26 @@
     <?php
         include "php/conect.php";
 
-        $nome = $_POST['name'];
+        //$id = $_POST['id'];
+        $id = isset($_POST['id']) ? (int) $_POST['id']: 0;
+        $modelo = $_POST['name'];
         $placa = $_POST['licence'];
 
-        $sql = "INSERT INTO `estacionamento`(`Modelo`, `Placa`, `Horário`) VALUES ('$nome','$placa',CURRENT_TIME() )";
+        //$sql = "INSERT INTO `estacionamento`(`Modelo`, `Placa`, `Horário`) VALUES ('$nome','$placa',CURRENT_TIME() )";
+
+        $sql = "UPDATE estacionamento set Modelo = '$modelo', Placa = '$placa' WHERE ID = '$id'";
 
         if (mysqli_query($conn, $sql)) {
-            echo "$nome cadastrado com sucesso!";
+            echo "$modelo alterado com sucesso!";
         } else {
-            echo "ERRO! $nome não foi cadastrado.";
+            echo "ERRO! $modelo não foi alterado.";
         }
 
     ?>
     <br><br><br>
 
     <div class="botao" style="text-align:center;"> 
-        <a href="index.php" class="button" style="background-color:blue">Voltar ao início</a>          
+        <a href="pesquisa.php" class="button" style="background-color:blue">Voltar</a>          
         </div>
 
 </div><br>
