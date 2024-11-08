@@ -15,9 +15,7 @@ if ($conn) {
    echo "Erro ao conectar no banco de dados.";
 }
 
+ 
 
-//function 
 
-
-//function permanencia(string $);
 ?>
