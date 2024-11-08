@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li>
-                <a href="pagamento.html">
+                <a href="pagamento.php">
                     <span class="icon"><i class="fa-solid fa-comment-dollar"></i></span>
                     <span class="title">PAGAMENTO</span>
                 </a>

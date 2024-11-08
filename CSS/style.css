@@ -376,3 +376,34 @@ a.button-ESC:active {
     font-size:x-large; 
     color:lightgreen
 }
+.h1PAG{
+    text-align: center;
+    color: #f3f3f3;
+    font-weight: bolder;
+}
+
+.tituloPAG{
+    text-align: center;
+}
+
+#p1PAG{
+
+    text-align: center;
+    color: #030303;
+    font-size: x-large;
+
+}
+
+#imgPAG{
+
+    width: 15%; 
+    max-width: 60%;
+    height: auto; 
+    margin: 0 auto;
+
+}
+img{
+    display: block; 
+    margin: 0 auto; 
+    max-width: 100%;
+}

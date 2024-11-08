@@ -16,8 +16,7 @@
         }
     </style>
 </head>
-<body>
-  
+<body>  
 <header>     
   <nav class="menu">
     <div class="logo">
@@ -45,9 +44,45 @@
     </div>
   </nav>
 </header><br><br><br><br><br>
+<h1 class="h1PAG">TABELA DE PREÇOS</h1>
+<div>
+    <table>
+        <tr>
+            <th colspan="2" class="tituloPAG">CARRO</th>
+        </tr>
+        <tr>
+            <td>2 Horas</td>
+            <td>R$ 11,00</td>
+        </tr>
+        <tr>
+            <td>Hora adicional</td>
+            <td>R$ 2,00</td>
+        </tr>
+        <tr>
+            <td>Período de 12 horas</td>
+            <td>R$ 19,00</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2" class="tituloPAG">MOTO</th>
+        </tr>
+        <tr>
+            <td>2 Horas</td>
+            <td>R$ 5,00</td>
+        </tr>
+        <tr>
+            <td>Hora adicional</td>
+            <td>R$ 1,00</td>
+        </tr>
+        <tr>
+            <td>Período de 12 horas</td>
+            <td>R$ 9,00</td>
+        </tr>
+    </table>
+</div> <br><br><br><br>
 
-
-    <?php
+<?php
 
         $pesquisa = $_POST['busca'] ?? '';
 
@@ -108,7 +143,6 @@
             <td>$horaEntrada</td>
             <td>$tempoPermanencia</td>
             <td>
-            <a href='cadastro_edit.php?id=$codIndividual' class='button-ADD'>Editar</a>
             <a href='#' class='button-ESC' data-toggle='modal' data-target='#confirmModal' data-id='$codIndividual' onclick=" .'"' ."pegar_dados($codIndividual, '$placa')" .'"' .">Excluir</a>
             </td>
         </tr>";
@@ -142,9 +176,12 @@
             </div>
         </div>
     </div>
-    </div>
+    </div> <br><br><br><br>
 
-        
+<h2 class="h1PAG">PAGUE COM PIX</h2> 
+<p id="p1PAG">Chave Pix: estacionebitstop@gmail.com</p><br>
+<img src="IMAGENS/qrcode.jpg" alt="QRCODE" id="imgPAG"><br><br><br>
+<footer></footer>
 <!-- Inclua o CSS do Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
