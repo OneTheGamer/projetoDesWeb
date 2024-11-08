@@ -159,8 +159,15 @@
         document.getElementById('placa').innerHTML = placas;
         document.getElementById('placa1').innerHTML = placas;
         document.getElementById('codIndi').value = id;
-    }
 
+        
+    }
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navegaion = document.querySelector('.navegation');
+
+    menuToggle.addEventListener('click', () => {
+    navegaion.classList.toggle('active'); // Alterna a classe 'active'
+    });
 </script>
 </body>
 </html>

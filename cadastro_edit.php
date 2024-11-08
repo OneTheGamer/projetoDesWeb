@@ -97,6 +97,6 @@
     ?>
 </div>
 
-<script src="js/script.js"></script>
+<script src="JS/pagamento.js"></script>
 </body>
 </html>

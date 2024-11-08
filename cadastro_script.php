@@ -64,6 +64,6 @@
 </div><br>
 
 
-
+<script src="JS/pagamento.js"></script>
 </body>
 </html>

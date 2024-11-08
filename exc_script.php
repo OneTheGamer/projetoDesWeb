@@ -58,6 +58,6 @@
     </div>
 </div>
 
-
+<script src="JS/pagamento.js"></script>
 </body>
 </html>
