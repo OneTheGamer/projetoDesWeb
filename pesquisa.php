@@ -52,7 +52,7 @@
         $pesquisa = $_POST['busca'] ?? '';
 
         include "php/conect.php";
-
+        //seleciona a informação que vai aparecer, do bd selecionado ONDE a placa for igual $pesquisa
         $sql = "SELECT * FROM estacionamento WHERE Placa LIKE '%$pesquisa%'";
 
         $dados = mysqli_query($conn, $sql);
@@ -60,7 +60,7 @@
 
     <nav class="pesquisa-BD">
         <form class="pesquisa1-BD" action="pesquisa.php" method="post">
-            <h1 class="titulo-pesquisa">Pesquisar</h1>
+            <h1 class="titulo-pesquisa">Pesquisar placa</h1>
             <div class="titulo-pesquisaBD">
                 <input class="input-pesquisa" type="search" placeholder="Pesquisar" aria-label="Pesquisar" name="busca" autofocus>
                 <button class="btn-pesquisa" type="submit">Buscar</button>
@@ -130,7 +130,7 @@
             </div>
             <div class="modal-body">
                 <form action="exc_script.php" method="post">
-                <p>Certeza que deseja excluir? <b id="placa">Placa</b></p>
+                <p>Certeza que deseja excluir <b id="placa">Placa</b> ?</p>
                 
             </div>
             <div class="modal-footer">
