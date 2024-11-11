@@ -42,8 +42,9 @@
 <div class="painel-container">
     <div class="painel-coluna">
         <h1>Sistema para controle de estacionamentos Bitstop</h1>
-        <p>A conexão perfeita entre você e seu Veiculo</p>
+        <p>A conexão perfeita entre você e seu Veiculo</p><br>
         <hr class="linha">
+        <br>
         <p>Acesse nosso painel de gerenciamento.</p>
         <a href="index.php" class="button">Entrada de veículos</a>
         <a href="pesquisa.php" class="button">Pesquisa de vagas</a>

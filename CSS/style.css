@@ -247,6 +247,8 @@ a.button:active {
     height: 30%;
     margin-inline: 20%;
     background-color: hsl(219, 87%, 15%);
+    border-radius: 16px;
+    padding: 30px;
 }
 .painel-coluna{
     display: block;
@@ -284,7 +286,7 @@ a.button:active {
 
 .btn-pesquisa{
     width: 15%;
-    color: green;
+    color: #f3f3f3;
     border: 1px solid green;
     background-color: transparent;
     cursor: pointer;
